@@ -1,0 +1,72 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #0b0f14;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0,0,0,0.85);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+    url("https://images.unsplash.com/photo-1599058917212-d750089bc07d") center/cover;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+/* Stats */
+.stats-box {
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.stats-box h3 {
+  color: #7CFFB2;
+  font-weight: 700;
+}
+
+/* Services */
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  transition: transform .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Programs */
+.program-card {
+  background: linear-gradient(135deg, #0b3d2e, #145c47);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.4);
+}
+
+/* Footer */
+footer {
+  background: #000;
+}
+
+
+
+
+.hero-img {
+  max-height: 500px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}

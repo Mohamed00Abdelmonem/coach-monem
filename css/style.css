@@ -1,0 +1,294 @@
+/* =====================
+   GLOBAL
+===================== */
+body {
+  background: radial-gradient(circle at top, #111827, #020617);
+  font-family: "Poppins", sans-serif;
+  color: #e5e7eb;
+}
+
+h1 {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #22c55e;
+}
+
+/* =====================
+   CARD
+===================== */
+form.card,
+.result-card {
+  background: linear-gradient(160deg, #020617, #111827);
+  border-radius: 22px;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+}
+
+/* =====================
+   LABELS
+===================== */
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+/* =====================
+   INPUTS
+===================== */
+input,
+select {
+  background: #020617 !important;
+  border: 1px solid #1f2937 !important;
+  color: #e5e7eb !important;
+  border-radius: 14px !important;
+}
+
+input:focus,
+select:focus {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35) !important;
+}
+
+/* =====================
+   BUTTON
+===================== */
+button.btn-success {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: #020617;
+  border-radius: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+button.btn-success:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.7);
+}
+
+/* =====================
+   OPTION BOX
+===================== */
+.option-box {
+  background: #020617;
+  border: 2px solid #1f2937;
+  border-radius: 18px;
+  color: #e5e7eb;
+}
+
+.option-box:has(input:checked) {
+  border-color: #22c55e;
+  background: linear-gradient(135deg, #020617, #064e3b);
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+}
+
+/* =====================
+   MEAL BOX
+===================== */
+.meal-box {
+  background: linear-gradient(135deg, #020617, #064e3b);
+  border-left: 6px solid #22c55e;
+  color: #ecfdf5;
+}
+
+/* =====================
+   SECTION TITLE
+===================== */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: block;
+  color: #1f2937;
+}
+
+/* =====================
+   CHECK GRID
+===================== */
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+/* =====================
+   CHECK CARD
+===================== */
+.check-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  background: #f9fafb;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* =====================
+   HIDE DEFAULT CHECKBOX
+===================== */
+.check-card input {
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #9ca3af;
+  position: relative;
+  cursor: pointer;
+}
+
+/* =====================
+   CHECKED STATE
+===================== */
+.check-card input:checked {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.check-card input:checked::after {
+  content: "✓";
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   SELECTED CARD
+===================== */
+.check-card:has(input:checked) {
+  background: #eef2ff;
+  border-color: #2563eb;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+  transform: translateY(-2px);
+}
+
+/* =====================
+   ALLERGY STYLE (RED)
+===================== */
+.check-grid.danger .check-card:has(input:checked) {
+  background: #fee2e2;
+  border-color: #dc2626;
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+}
+
+.check-grid.danger input:checked {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* =====================
+   MOBILE
+===================== */
+@media (max-width: 576px) {
+  .check-card {
+    font-size: 1.05rem;
+    padding: 18px;
+  }
+}
+
+
+/* ===== RESULT CONTAINER ===== */
+#output {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== MAIN RESULT CARD ===== */
+.result-card {
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  animation: fadeUp 0.6s ease;
+}
+
+/* ===== HEADINGS ===== */
+.result-card h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.result-card h4,
+.result-card h5 {
+  margin-top: 25px;
+  font-weight: 600;
+  color: #7CFFB2;
+}
+
+/* ===== TEXT ===== */
+.result-card p {
+  margin-bottom: 6px;
+  color: #e0e0e0;
+}
+
+/* ===== MACROS LIST ===== */
+.result-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.result-card ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== MEAL BOX ===== */
+.meal-box {
+  background: linear-gradient(135deg, #0b3d2e, #145c47);
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin-top: 12px;
+  line-height: 1.6;
+  border-left: 5px solid #7CFFB2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-box strong {
+  color: #9dffcc;
+}
+
+.meal-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+#downloadPdfBtn {
+  background: linear-gradient(135deg, #7CFFB2, #2ecc71);
+  color: #0b3d2e;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+#downloadPdfBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #2ecc71, #7CFFB2);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

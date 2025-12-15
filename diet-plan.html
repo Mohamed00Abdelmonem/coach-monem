@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Trainer Nutrition Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container py-5">
+
+  <h1 class="mb-4 text-center">🏋️ Personal Trainer Nutrition Planner</h1>
+
+  <!-- FORM -->
+  <form id="userForm" class="card p-4 shadow-lg mb-5">
+
+    <div class="row g-3">
+
+      <div class="col-md-6">
+        <label>Full Name</label>
+        <input type="text" id="nameInput" class="form-control" required>
+      </div>
+
+      <div class="col-md-3">
+        <label>Age</label>
+        <input type="number" id="ageInput" class="form-control" required>
+      </div>
+
+      <div class="col-md-3">
+        <label>Gender</label>
+        <select id="genderInput" class="form-select">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label>Weight (kg)</label>
+        <input type="number" id="weightInput" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label>Height (cm)</label>
+        <input type="number" id="heightInput" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label>Activity Level</label>
+        <select id="activityInput" class="form-select">
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Light</option>
+          <option value="1.55">Moderate</option>
+          <option value="1.725">Active</option>
+          <option value="1.9">Very Active</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label>Goal</label>
+        <select id="goalInput" class="form-select">
+          <option value="lose">Lose Weight</option>
+          <option value="maintain">Maintain</option>
+          <option value="gain">Gain Muscle</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label>Nationality</label>
+        <select id="nationalityInput" class="form-select">
+          <option value="egyptian">Egyptian</option>
+          <option value="german">German</option>
+          <option value="american">American</option>
+        </select>
+      </div>
+
+     <!-- FOOD PREFERENCES -->
+<div class="col-12">
+  <label class="">Preferred Food Types</label>
+
+  <div class="check-grid">
+    <label class="check-card">
+      <input type="checkbox" class="foodPref" value="chicken">
+      🍗 Chicken
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="foodPref" value="meat">
+      🥩 Meat
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="foodPref" value="fish">
+      🐟 Fish
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="foodPref" value="vegetarian">
+      🥗 Vegetarian
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="foodPref" value="eggs">
+      🥚 Eggs
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="foodPref" value="dairy">
+      🥛 Dairy
+    </label>
+  </div>
+</div>
+
+<!-- ALLERGIES -->
+<div class="col-12 mt-4">
+  <label class="">Food Allergies</label>
+
+  <div class="check-grid danger">
+    <label class="check-card">
+      <input type="checkbox" class="allergy" value="chicken">
+      🍗 Chicken
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="allergy" value="meat">
+      🥩 Meat
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="allergy" value="fish">
+      🐟 Fish
+    </label>
+
+    <label class="check-card">
+      <input type="checkbox" class="allergy" value="dairy">
+      🥛 Dairy
+    </label>
+  </div>
+</div>
+
+      <div class="col-12 mt-3">
+        <button class="btn btn-success w-100 btn-lg">
+          Generate Nutrition Plan
+        </button>
+      </div>
+
+    </div>
+  </form>
+
+  <!-- OUTPUT -->
+  <div id="output"></div>
+
+</div>
+
+<!-- PDF LIBRARY (IMPORTANT) -->
+
+<!-- JS FILES -->
+<script src="js/calculations.js"></script>
+<script src="js/meals.js"></script>
+<script src="js/planner.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/pdf.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
